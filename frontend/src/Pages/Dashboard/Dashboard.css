@@ -1,0 +1,168 @@
+.Dashboard-container .gridcontainer {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 100px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: 40px;
+  margin: 5px 15px;
+}
+/* header section */
+.Dashboard-container .gridcontainer .header {
+  grid-area: header;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+.Dashboard-container .gridcontainer .header .searchField {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Dashboard-container .gridcontainer .header .searchBar {
+  width: 100%;
+  overflow: hidden;
+  align-self: center;
+  text-align: center;
+}
+
+.Dashboard-container .gridcontainer .header .searchResult {
+  width: 666.67px;
+  color: rgb(42, 40, 40);
+  left: 11%;
+  height: auto;
+  max-height: 200px;
+  background-color: rgba(226, 226, 226, 0.853);
+  position: absolute;
+  top: calc(100% + 3px);
+  padding: 10px 15px;
+  z-index: 50;
+  overflow-y: auto;
+  border-radius: 10px;
+ 
+}
+.Dashboard-container .gridcontainer .header .profile,
+.Dashboard-container .gridcontainer .Slate {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  align-self: center;
+}
+.Dashboard-container .gridcontainer .header .searchBar input {
+  width: 80%;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  color: black;
+}
+
+.Dashboard-container .gridcontainer .header .profile {
+  display: flex;
+  gap: 15px;
+  justify-self: self-start;
+}
+
+/* main section */
+.Dashboard-container .gridcontainer .main-section {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 75%;
+  overflow: hidden;
+}
+.Dashboard-container .gridcontainer .main-section .createCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  min-width: 267px;
+}
+
+.Dashboard-container .gridcontainer .main-section .card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.Dashboard-container .gridcontainer .main-section .card .img-wrap {
+  box-shadow: 0 0 5px;
+  min-width: 200px;
+  width: 60%;
+  height: 75%;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  scale: 0.98;
+  transition: ease;
+  
+}
+.Dashboard-container .gridcontainer .main-section .card .img-wrap:hover {
+  outline: 2px solid silver;
+  scale: 1.01;
+ }
+
+/* dynamic section */
+
+.Dashboard-container .gridcontainer .main-section .recentCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 1px;
+
+  margin: 0;
+}
+.Dashboard-container .gridcontainer .main-section .recentCard .recentFlex {
+  min-width: 200px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* footer section */
+
+.Dashboard-container .gridcontainer .footer-section {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Dashboard-container ul{
+  padding:0;
+  width: 100%;  
+  
+}
+
+.Dashboard-container li{
+  list-style: none;
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin: 8px 0;
+  background-color: rgba(256,256,256,1);
+  border-radius: 10px;
+  scale: 1;
+}
+
+.Dashboard-container li:hover{
+  outline: 1px solid silver;
+  scale: 1.02;
+}

@@ -1,0 +1,15 @@
+runtime: nodejs22  # You have chosen Node.js 22 runtime. This is fine as long as your app is compatible.
+
+env_variables:
+  MONGO_URL = mongodb+srv://jacobamith3:E0UHYieHMxsF7nSr@cluster0.s4xr5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  PORT: 8080  # App Engine usually expects your app to run on port 8080.
+  JWT_SECRET_KEY: "5234256d72ee9a70e76c97823bc22b79975451e85eb9fa77e8069c30ee349508"
+
+handlers:
+  - url: /api/.*  # Route all API requests starting with /api
+    script: auto  # Let Google App Engine handle the routing automatically for Node.js
+  # - url: /.*  # Default handler for all other requests (to serve React frontend, etc.)
+  #   static_files: build/index.html  # Serve React's main HTML page
+  #   upload: build/index.html
+  # - url: /static/.*  # Handle static assets like JS, CSS, images, etc.
+  #   static_dir: build/static
