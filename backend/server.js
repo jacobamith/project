@@ -15,7 +15,7 @@ const initializeSocket = require("./Service/DocumentService");
 // Middleware
 app.use(
   cors({
-    origin: "https://collaboration-tool-aajt.onrender.com",
+    origin: "https://project-u6cs.onrender.com",
     credentials: true,
   })
 );

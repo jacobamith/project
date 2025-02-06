@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
     port:587,
     secure:false,
     auth:{
-        user:'https://collaboration-tool-aajt.onrender.com',
+        user:'https://project-u6cs.onrender.com',
         pass:'tgfs cczv czso mygd'
     }
 });

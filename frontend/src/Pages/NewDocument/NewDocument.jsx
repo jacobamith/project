@@ -32,7 +32,7 @@ function NewDocument() {
   //getting name
   useEffect(() => {
     const fetchname = async () => {
-      const url = ` https://slatebackend-wrwi.onrender.com/api/document/${documentId}`;
+      const url = ` https://project-u6cs.onrender.com/api/document/${documentId}`;
       const res = await axios.get(url, { withCredentials: true });
       if (res == null) return;
       localStorage.setItem(documentId.toString(), res.data);
@@ -45,7 +45,7 @@ function NewDocument() {
   //server connection
 
   useEffect(() => {
-    const sock = io("https://slatebackend-wrwi.onrender.com", {
+    const sock = io("https://project-u6cs.onrender.com", {
       withCredentials: true,
       reconnection: true,
       reconnectionAttempts: 7,
@@ -245,7 +245,7 @@ function NewDocument() {
 
       textfieldButton.addEventListener("blur", async (e) => {
         const tesxt = e.target.value;
-        const url = ` https://slatebackend-wrwi.onrender.com/api/document/${documentId}`;
+        const url = ` https://project-u6cs.onrender.com/api/document/${documentId}`;
         const res = await axios.post(url, { tesxt }, { withCredentials: true });
       });
 

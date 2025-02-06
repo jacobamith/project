@@ -62,7 +62,7 @@ function Login_Signup() {
   const userLogin = async () => {
     try {
       const respon = await axios.post(
-        "https://collaboration-tool-aajt.onrender.com",
+        "https://project-u6cs.onrender.com",
         { email, password },
         { withCredentials: true }
       );
@@ -104,7 +104,7 @@ function Login_Signup() {
     if (!formValidation()) return;
     try {
       const response = await axios.post(
-        "https://collaboration-tool-aajt.onrender.com",
+        "https://project-u6cs.onrender.com",
         {
           name,
           email,

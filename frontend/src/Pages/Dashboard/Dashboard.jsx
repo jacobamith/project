@@ -14,7 +14,7 @@ function Dashboard({ onUserLogin }) {
   const params = useParams();
 
   useEffect(() => {
-    const url = "https://collaboration-tool-aajt.onrender.com";
+    const url = "https://project-u6cs.onrender.com";
     try {
       const fetchData = async () => {
         const response = await axios.get(url, { withCredentials: true });
@@ -39,7 +39,7 @@ function Dashboard({ onUserLogin }) {
   useEffect(() => {
     const fetchData = async () => {
       const url =
-        "https://collaboration-tool-aajt.onrender.com";
+        "https://project-u6cs.onrender.com";
       const response = await axios.get(url, { withCredentials: true });
       const userDocuments = response.data;
 
@@ -63,7 +63,7 @@ function Dashboard({ onUserLogin }) {
   }, [user, input]);
 
   //logout
-  const logout = "https://collaboration-tool-aajt.onrender.com";
+  const logout = "https://project-u6cs.onrender.com";
   const handleLogout = async () => {
     try {
       const res = await axios.post(logout, {}, { withCredentials: true });
