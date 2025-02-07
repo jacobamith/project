@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cookie = require("cookie-parser");
 const http = require("http");
 
+
 const app = express();
 const port = process.env.PORT || 5000;
 const uri = process.env.MONGO_URL;
@@ -12,6 +13,12 @@ const uri = process.env.MONGO_URL;
 const userRoute = require("./Routes/User"); 
 const documentRoute = require("./Routes/Document");
 const initializeSocket = require("./Service/DocumentService"); 
+
+
+//serve statoc fo;es from build folder
+app.use(express.static(path.join(__dirname, "build")));
+app.use(bodyparser.urlencoded({ extended: false }));
+
 // Middleware
 app.use(
   cors({
@@ -25,6 +32,7 @@ app.use(cookie());
 // Routes
 app.use("/api/users", userRoute);
 app.use("/api/document",documentRoute);
+
 
 // Database connection
 mongoose

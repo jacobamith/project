@@ -1,21 +1,24 @@
 {
-  "name": "project",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "index.js",
   "scripts": {
-      "start": "node /opt/render/project/server.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacobamith/project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jacobamith/project/issues"
-  },
-  "homepage": "https://github.com/jacobamith/project#readme"
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "nodemailer": "^6.9.16",
+    "socket.io": "^4.8.1"
+  }
 }
